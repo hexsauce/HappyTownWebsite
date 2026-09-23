@@ -1,0 +1,179 @@
+/* EzPz Games — studio site (HappyTown) */
+
+:root {
+  --orange: #ee7103ce;
+  --orange-deep: #c85f02;
+  --ink: #0a0a0a;
+  --night: #13151d;
+  --paper: #f2f2f2;
+  --paper-warm: #e6e4e0;
+  --muted: #5c5a57;
+  --muted-light: #b7b4ae;
+
+  --shadow-hard: 6px 6px 0 var(--ink);
+  --shadow-hard-sm: 4px 4px 0 var(--ink);
+  --shadow-hard-inv: 6px 6px 0 var(--paper);
+
+  --wrap: 1080px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--night);
+  color: var(--paper);
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-family: "Archivo Black", system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--wrap);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- hero ---------- */
+
+.hero-happytown {
+  padding: 96px 0 84px;
+  display: flex;
+  justify-content: center;
+}
+
+.happytown-logo {
+  display: block;
+  width: 300px;
+  max-width: 80%;
+}
+
+/* ---------- sections ---------- */
+
+
+
+/* ---------- model placeholder cards ---------- */
+
+.models {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.model {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+.model-card {
+  aspect-ratio: 4 / 3;
+  background-color: var(--night);
+ border: 3px solid var(--orange-deep);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.model-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.model-caption {
+  margin: 0;
+  color: var(--muted-light);
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+/* ---------- footer ---------- */
+
+.foot {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 30px 0;
+}
+
+.foot .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: space-between;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.foot a {
+  color: var(--paper);
+}
+
+.foot-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.foot-brand img {
+  height: 22px;
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+  display: block;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 720px) {
+  .hero-happytown {
+    padding: 60px 0 52px;
+  }
+
+  .band {
+    padding: 52px 0;
+  }
+
+  .masthead nav {
+    gap: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition: none !important;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
